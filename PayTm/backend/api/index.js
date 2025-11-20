@@ -11,5 +11,8 @@ app.use(express.json());
 
 app.use("/api/v1", rootRouter);
 
+app.get("/", (req, res) => {
+  res.json({ message: "API is running! Use /api/v1/..." });
+});
 
 module.exports = app;
