@@ -11,6 +11,7 @@ app.use(express.json());
 
 app.use("/api/v1", rootRouter);
 
-// Remove app.listen(3000)
-// Export for Vercel
+app.get("/", (req, res) => {
+  res.json({ message: "API is running! Use /api/v1/..." });
+});
 module.exports = app;
