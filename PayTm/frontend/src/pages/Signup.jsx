@@ -33,7 +33,7 @@ export const Signup = () => {
         }} placeholder="123456" label={"Password"} />
         <div className="pt-4">
           <Button onClick={async () => {
-            const response = await axios.post("https://payment-app-lked.vercel.app/", {
+            const response = await axios.post("https://payment-app-lked.vercel.app/api/v1/user/signup", {
               username,
               firstName,
               lastName,
